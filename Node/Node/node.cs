@@ -1,8 +1,10 @@
 ﻿namespace Node
 {
+    //Te falta poner los delegados asda
+    public delegate void VisitDelegate(T node);
+    public delegate bool CheckDelegate<T>(T element);
     public class Node<T>
-    {
-
+    { 
         private T _item;
         private List<Node<T>> _children = new List<Node<T>>();
         private Node<T> _parent;
