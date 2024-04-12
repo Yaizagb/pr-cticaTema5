@@ -35,7 +35,7 @@
                 SetParent(Parent);
             }
         }
-        public bool IsRooot => _parent == null;
+        public bool Root => _parent == null;
 
         public bool IsLeaf => this._children.Count == 0 && this._parent != null;
 
