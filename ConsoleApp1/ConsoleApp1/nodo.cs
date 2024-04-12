@@ -1,8 +1,8 @@
-﻿namespace Node
+﻿namespace ConsoleApp1
 {
+    
     public class Node<T>
     {
-
         private T _item;
         private List<Node<T>> _children = new List<Node<T>>();
         private Node<T> _parent;
@@ -33,7 +33,7 @@
                 SetParent(Parent);
             }
         }
-        public bool Root => _parent == null;
+        public bool IsRoot => _parent == null;
 
         public bool IsLeaf => this._children.Count == 0 && this._parent != null;
 
@@ -215,5 +215,7 @@
                 return null;
             return FindNodeList(checker);
         }
+
+
     }
 }
